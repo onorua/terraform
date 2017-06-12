@@ -268,10 +268,6 @@ package command
 import (
 IMPORTS
 	"github.com/hashicorp/terraform/plugin"
-	"github.com/hashicorp/terraform/terraform"
-
-	//New Provider Builds
-	opcprovider "github.com/hashicorp/terraform-provider-opc/opc"
 )
 
 var InternalProviders = map[string]plugin.ProviderFunc{
@@ -280,10 +276,5 @@ PROVIDERS
 
 var InternalProvisioners = map[string]plugin.ProvisionerFunc{
 PROVISIONERS
-}
-
-func init() {
-	// New Provider Layouts
-	InternalProviders["opc"] = func() terraform.ResourceProvider { return opcprovider.Provider() }
 }
 `
